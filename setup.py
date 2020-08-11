@@ -6,11 +6,20 @@ from codecs import open
 from os import path
 from wagtailstreamforms import __version__
 
+tests_require = [
+    "mock==4.0.2",
+    # Linting
+    "isort[pyproject]==4.3.21",
+    "flake8==3.7.9",
+    "flake8-blind-except==0.1.1",
+    "flake8-debugger==3.1.0"
+]
+
 
 install_requires = [
     'Django>=2,<2.1',
     'django-recaptcha>=1.3.1',
-    'wagtail>=2,<2.2'
+    'wagtail>=2,<=2.10'
 ]
 
 documentation_extras = [
@@ -40,7 +49,8 @@ setup(
     ],
     install_requires=install_requires,
     extras_require={
-        'docs': documentation_extras
+        'docs': documentation_extras,
+        'test': tests_require,
     },
     include_package_data=True,
     keywords=['wagtail', 'streamfield', 'forms', 'accent', 'design'],
@@ -52,9 +62,9 @@ setup(
         'Framework :: Wagtail',
         'Framework :: Wagtail :: 2',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Framework :: Django',
         'Framework :: Django :: 2.0',
         'Framework :: Wagtail',

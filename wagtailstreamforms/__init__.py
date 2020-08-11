@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-__version__ = '2.1.2'
-=======
 from wagtailstreamforms.utils.version import get_version
 
 # major.minor.patch.release.number
 # release must be one of alpha, beta, rc, or final
-VERSION = (3, 7, 0, 'final', 1)
+VERSION = (3, 10, 0, "final", 1)
 
 __version__ = get_version(VERSION)
->>>>>>> lotus
