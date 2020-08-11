@@ -17,7 +17,7 @@ tests_require = [
 
 
 install_requires = [
-    'Django>=2,<2.1',
+    'Django>=2,<3.1',
     'django-recaptcha>=1.3.1',
     'wagtail>=2,<=2.10'
 ]
